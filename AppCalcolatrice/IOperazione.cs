@@ -8,6 +8,6 @@ namespace AppCalcolatrice
 {
     internal interface IOperazione
     {
-        public double Esegui(string inputUtente);
+        double Esegui(double a, double b);
     }
 }

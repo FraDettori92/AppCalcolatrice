@@ -19,15 +19,22 @@ namespace AppCalcolatrice
 
         public void ProcessaRisultato(string inputUtente)
         {
+            double a = 10;
+            double b = 15;
+
             var opp = Operazione(inputUtente);
-            if (opp != null)
-            {
-                Console.WriteLine($"Il risultato è: {opp.Esegui(inputUtente)}");
-            }
-            else
-            {
-                Console.WriteLine("Operazione non supportata!");
-            }
+            var risultato = nuovometodo(a, b, opp);
+            Console.WriteLine(risultato);
+        }
+
+        private double nuovometodo(double a, double b, IOperazione q)
+        {
+            return q.Esegui(a, b);
+        }
+
+        public void HomeCalcolatrice()
+        {
+            Console.WriteLine("Quale operazione vorresti svolgere?:\n+: Somma\n-: Differenza\n*: Prodotto\n/: Quoziente");
         }
     }
 }

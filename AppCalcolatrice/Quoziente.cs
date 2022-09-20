@@ -8,16 +8,9 @@ namespace AppCalcolatrice
 {
     internal class Quoziente : IOperazione
     {
-        public double Esegui(string inputUtente)
+        public double Esegui(double a, double b)
         {
-            string[] arrayNum = inputUtente.Split('/');
-            double risultato = double.Parse(arrayNum[0]);
-            for (int i = 1; i < arrayNum.Length; i++)
-            {
-                double num = double.Parse(arrayNum[i]);
-                risultato /= num;
-            }
-            return risultato;
+            return a + b;
         }
     }
 }
