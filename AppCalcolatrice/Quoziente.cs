@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppCalcolatrice
 {
-    internal class Quoziente : IOperazione
+    internal class Quoziente
     {
-        public double Esegui(double a, double b)
+        public double EseguiQuoziente(double a, double b)
         {
             return a / b;
         }

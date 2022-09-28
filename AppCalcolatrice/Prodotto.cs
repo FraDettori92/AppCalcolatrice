@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppCalcolatrice
 {
-    internal class Prodotto : IOperazione
+    internal class Prodotto
     {
-        public double Esegui(double a, double b)
+        public double EseguiProdotto(double a, double b)
         {
             return a * b;
         }

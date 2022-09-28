@@ -6,7 +6,5 @@ public class Program
     {
         var calc = new Calcolatrice();
         calc.HomeCalcolatrice();
-        var inputUtente = Console.ReadLine();
-        calc.ProcessaSoluzione(inputUtente);
     }
 }

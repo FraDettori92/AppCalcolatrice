@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppCalcolatrice
 {
-    internal class Differenza : IOperazione
+    internal class Differenza
     {
-        public double Esegui(double a, double b)
+        public double EseguiDifferenza(double a, double b)
         {
             return a - b;
         }
