@@ -12,22 +12,10 @@ namespace AppCalcolatrice
 
         private IOperazione Operazione(string inputUtente)
         {
-            if (inputUtente.Contains('+')) 
-            {
-                return new Somma();
-            }
-            else if (inputUtente.Contains('-')) 
-            { 
-                return new Differenza(); 
-            }
-            else if (inputUtente.Contains('*')) 
-            {
-                return new Prodotto();
-            }
-            else if (inputUtente.Contains('/')) 
-            { 
-                return new Quoziente(); 
-            }
+            if (inputUtente.Contains('+')) return new Somma();
+            else if (inputUtente.Contains('-')) return new Differenza();
+            else if (inputUtente.Contains('*')) return new Prodotto();
+            else if (inputUtente.Contains('/')) return new Quoziente();
             else return null;
         }
 
