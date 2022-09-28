@@ -10,7 +10,7 @@ namespace AppCalcolatrice
     {
         public double Esegui(double a, double b)
         {
-            return a + b;
+            return a / b;
         }
     }
 }

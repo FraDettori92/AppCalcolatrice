@@ -8,28 +8,37 @@ namespace AppCalcolatrice
 {
     internal class Calcolatrice
     {
+        public delegate double Del(double a, double b);
+
         private IOperazione Operazione(string inputUtente)
         {
-            if (inputUtente.Contains('+')) { return new Somma(); }
-            else if (inputUtente.Contains('-')) { return new Differenza(); }
-            else if (inputUtente.Contains('*')) { return new Prodotto(); }
-            else if (inputUtente.Contains('/')) { return new Quoziente(); }
+            if (inputUtente.Contains('+')) 
+            {
+                return new Somma();
+            }
+            else if (inputUtente.Contains('-')) 
+            { 
+                return new Differenza(); 
+            }
+            else if (inputUtente.Contains('*')) 
+            {
+                return new Prodotto();
+            }
+            else if (inputUtente.Contains('/')) 
+            { 
+                return new Quoziente(); 
+            }
             else return null;
         }
 
-        public void ProcessaRisultato(string inputUtente)
+        public void ProcessaSoluzione(string inputUtente)
         {
-            double a = 10;
-            double b = 15;
+            double a = 20;
+            double b = 10;
 
-            var opp = Operazione(inputUtente);
-            var risultato = nuovometodo(a, b, opp);
-            Console.WriteLine(risultato);
-        }
-
-        private double nuovometodo(double a, double b, IOperazione q)
-        {
-            return q.Esegui(a, b);
+            var ogg = Operazione(inputUtente);
+            Del del = new Del(ogg.Esegui);
+            Console.WriteLine($"{"Il risultato è: "} {del(a, b)}");
         }
 
         public void HomeCalcolatrice()
