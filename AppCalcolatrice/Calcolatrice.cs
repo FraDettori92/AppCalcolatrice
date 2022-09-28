@@ -33,8 +33,10 @@ namespace AppCalcolatrice
 
         public void ProcessaSoluzione(string inputUtente)
         {
-            double a = 20;
-            double b = 10;
+            Console.WriteLine("Inserisci il primo numero: ");
+            double a = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Inserisci il secondo numero: ");
+            double b = Double.Parse(Console.ReadLine());
 
             var ogg = Operazione(inputUtente);
             Del del = new Del(ogg.Esegui);
